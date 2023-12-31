@@ -196,7 +196,61 @@ C:.
                     └───reservationsservice
                             ReservationsServiceApplicationTests.java
 ```
+## Resources Service
 
+```
+C:.                                       
+│   .gitignore                            
+│   Dockerfile                            
+│   mvnw                                  
+│   mvnw.cmd                              
+│   pom.xml                               
+│                                         
+├───.mvn                                  
+│   └───wrapper                           
+│           maven-wrapper.jar             
+│           maven-wrapper.properties      
+│                                         
+└───src                 
+    ├───main            
+    │   ├───java        
+    │   │   └───com     
+    │   │       └───sdia
+    │   │           └───resourcesservice
+    │   │               │   ResourcesServiceApplication.java
+    │   │               │
+    │   │               ├───Dtos
+    │   │               │       ResourceClient.java
+    │   │               │
+    │   │               ├───entity
+    │   │               │       Resource.java
+    │   │               │
+    │   │               ├───enums
+    │   │               │       ResourceType.java
+    │   │               │
+    │   │               ├───mappers
+    │   │               │       ResourceMappers.java
+    │   │               │
+    │   │               ├───repository
+    │   │               │       ResourceRepository.java
+    │   │               │
+    │   │               ├───security
+    │   │               │       SecurityConfig.java
+    │   │               │
+    │   │               └───web
+    │   │                       ResourceController.java
+    │   │
+    │   └───resources
+    │           application.properties
+    │
+    └───test
+        └───java
+            └───com
+                └───sdia
+                    └───resourcesservice
+                            ResourcesServiceApplicationTests.java
+
+```
 
 
 
