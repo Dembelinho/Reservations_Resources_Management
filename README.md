@@ -1,5 +1,5 @@
 ## Angular front App
-
+```
 C:.                                       
 │   .editorconfig
 │   .gitignore
@@ -38,9 +38,9 @@ C:.
     └───assets
             .gitkeep
             silent-check-sso.html
-
+```
 ## Config Service
-
+```
 C:.
 │   .gitignore
 │   Dockerfile
@@ -70,9 +70,9 @@ C:.
                 └───sdia
                     └───configservice
                             ConfigServiceApplicationTests.java
-
+```
 ## Discovery Service
-
+```
 C:.
 │   .gitignore
 │   Dockerfile
@@ -102,7 +102,7 @@ C:.
                 └───sdia
                     └───discoveryservice
                             DiscoveryServiceApplicationTests.java
-
+```
 ## Gateway Service
 
 C:.
