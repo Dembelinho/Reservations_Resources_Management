@@ -1,0 +1,106 @@
+<h2 class="text-center">Welcome to § Reservations § Page!</h2>
+<head>
+  <style>
+    h3 {
+      text-align: center;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+<div class="ps-3">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th><th>Context</th>
+          <th>Date</th><th>Resource</th>
+          <th>Duration</th><th>Person</th>
+          <th >Operations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let r of reservations">
+          <td>{{r.id}}</td>
+          <td>{{r.name}}</td>
+          <td>{{r.context}}</td>
+          <td>{{r.date}}</td>
+          <td>
+            <button class="btn btn-lg btn-outline-primary" (click)="openr(mymodalfor,r.resource)">
+              Resource</button>
+          </td>
+          <td>{{r.duration}}</td>
+          <td><button class="btn btn-lg btn-outline-primary" (click)="open(mymodal,r.person)">Person</button></td>
+          <td>
+            <button class="bi bi-trash text-danger" (click)="deleteReservation(r.id)">DELETE</button>
+            <button class="btn btn-warning" >UPDATE</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Person</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Function</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td>{{person?.id}}</td>
+        <td>{{person?.name}}</td>
+        <td>{{person?.email}}</td>
+        <td>{{person?.function}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
+
+<ng-template #mymodalfor let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-b-title">Resource</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td>{{resource?.id}}</td>
+        <td>{{resource?.name}}</td>
+        <td>{{resource?.type}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
+
+

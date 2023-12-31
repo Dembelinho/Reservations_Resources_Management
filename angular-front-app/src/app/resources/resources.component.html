@@ -1,0 +1,36 @@
+<h2 class="text-center">Welcome to § Resources § Page!</h2>
+<head>
+  <style>
+    h3 {
+      text-align: center;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+<div class="ps-3">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Type</th><th>Operations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let r of resources">
+          <td>{{r.id}}</td>
+          <td>{{r.name}}</td>
+          <td>{{r.type}}</td>
+          <td>
+            <button class="bi bi-trash text-danger" (click)="deleteResource(r.id)">DELETE</button>
+            <button class="btn btn-warning" >UPDATE</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+

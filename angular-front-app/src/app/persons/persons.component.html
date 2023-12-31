@@ -1,0 +1,34 @@
+<h2 class="text-center">Welcome to Persons Page!</h2>
+
+<div class="center-container">
+  <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">See Person details</button>
+</div>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Person</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Function</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of persons">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.function}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
+
