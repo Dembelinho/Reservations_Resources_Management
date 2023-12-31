@@ -104,7 +104,7 @@ C:.
                             DiscoveryServiceApplicationTests.java
 ```
 ## Gateway Service
-
+```
 C:.
 │   .gitignore
 │   Dockerfile
@@ -134,9 +134,9 @@ C:.
                 └───sdia
                     └───gatewayservice
                             GatewayServiceApplicationTests.java
-
+```
 ## Reservations Service 
-
+```
 C:.
 │   .gitignore
 │   Dockerfile
@@ -195,6 +195,7 @@ C:.
                 └───sdia
                     └───reservationsservice
                             ReservationsServiceApplicationTests.java
+```
 
 
 
